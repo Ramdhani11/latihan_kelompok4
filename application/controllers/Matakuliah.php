@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Matakuliah extends CI_Controller
 {
     public function index()
@@ -8,10 +8,10 @@ class Matakuliah extends CI_Controller
     public function cetak()
     {
         $data = [
-            'kode' => $this->input->POST('kode');
-            'nama' => $this->input->POST('nama');
-            'sks' => $this->input->POST('sks');
-        ]
+            'kode' => $this->input->POST('kode'),
+            'nama' => $this->input->POST('nama'),
+            'sks' => $this->input->POST('sks')
+        ];
+        $this->load->view('view-data-matakuliah', $data);
     }
 }
-?>
