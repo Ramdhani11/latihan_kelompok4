@@ -7,28 +7,28 @@ class Matakuliah extends CI_Controller
     }
     public function cetak()
     {
-        $this->form_validation->set_rules('kode', 'Kode Matakuliah', 'require|min_lenght[3]', [
-            'require' => 'Kode Matakuliah Harus Diisi',
-            'min_lenght[3]' => 'Kode tertalu pendek'
+        $this->form_validation->set_rules('kode', 'Kode Matakuliah', 'required', [
+            'required' => 'Kode Matakuliah Harus Diisi',
+
         ]);
-        $this->form_validation->set_rules('nama', 'Nama Matakuliah', 'require|min_lenght[3]', [
-            'require' => 'Nama Matakuliah Harus Diisi',
-            'min_lenght[3]' => 'Nama tertalu pendek'
+        $this->form_validation->set_rules('nama', 'nama Matakuliah', 'required', [
+            'required' => 'nama Matakuliah Harus Diisi'
         ]);
 
-        if ($this->form_validation->run() != true) {
+        if ($this->form_validation->run() == false) {
             $this->load->view('view-form-matakuliah');
         } else {
 
+            $kode = $this->input->post('kode', true);
+            $nama = $this->input->post('nama', true);
+            $sks = $this->input->post('sks', true);
+
             $data = [
-                'kode' => $this->input->POST('kode'),
-                'nama' => $this->input->POST('nama'),
-                'sks' => $this->input->POST('sks')
+                'kode' => $kode,
+                'nama' => $nama,
+                'sks' => $sks
             ];
+            $this->load->view('view-data-matakuliah', $data);
         }
-
-
-
-        $this->load->view('view-data-matakuliah');
     }
 }

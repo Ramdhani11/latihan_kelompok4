@@ -22,24 +22,24 @@
                 </td>
             </tr>
             <tr>
-                <th>Kode MTK</th>
+                <th align="left">Kode MTK</th>
                 <th>:</th>
                 <td>
-                    <?= $_POST['kode']; ?>
+                    <?= $kode; ?>
                 </td>
             </tr>
             <tr>
-                <th>Nama MTK</th>
+                <th align="left">Nama MTK</th>
                 <th>:</th>
                 <td>
-                    <?= $_POST['nama']; ?>
+                    <?= $nama; ?>
                 </td>
             </tr>
             <tr>
-                <td>SKS</td>
-                <td>:</td>
+                <th align="left">SKS</th>
+                <th>:</th>
                 <td>
-                    <?= $_POST['sks']; ?>
+                    <?= $sks; ?>
                 </td>
             </tr>
             <tr>
