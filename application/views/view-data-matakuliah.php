@@ -25,28 +25,28 @@
                 <th>Kode MTK</th>
                 <th>:</th>
                 <td>
-                    <?= $kode; ?>
+                    <?= $_POST['kode']; ?>
                 </td>
             </tr>
             <tr>
-                <th>Kode MTK</th>
+                <th>Nama MTK</th>
                 <th>:</th>
                 <td>
-                    <?= $nama; ?>
+                    <?= $_POST['nama']; ?>
                 </td>
             </tr>
             <tr>
                 <td>SKS</td>
                 <td>:</td>
                 <td>
-                    <?= $sks; ?>
+                    <?= $_POST['sks']; ?>
                 </td>
             </tr>
             <tr>
                 <td colspan="3" align="center">
                     <a href="<?= base_url('Matakuliah'); ?>"">Kembali</a>
                 </td>
-            </tr>
+            </tr> 
         </table>
     </center>
 </body>
