@@ -31,7 +31,7 @@
                 </tr>
                 <tr align="center">
                     <th colspan="3">
-                        <i style="color: red;"><?= form_error('kode'); ?></i>
+                        <i style="color: red;"><?= form_error('kode'); ?> </i>
                     </th>
                 </tr>
                 <tr>

@@ -7,12 +7,13 @@ class Matakuliah extends CI_Controller
     }
     public function cetak()
     {
-        $this->form_validation->set_rules('kode', 'Kode Matakuliah', 'required', [
+        $this->form_validation->set_rules('kode', 'Kode Matakuliah', 'required|min_length[3]', [
             'required' => 'Kode Matakuliah Harus Diisi',
-
+            'min_length' => 'Input min 3 karakter'
         ]);
-        $this->form_validation->set_rules('nama', 'nama Matakuliah', 'required', [
-            'required' => 'nama Matakuliah Harus Diisi'
+        $this->form_validation->set_rules('nama', 'nama Matakuliah', 'required|min_length[3]', [
+            'required' => 'Nama Matakuliah Harus Diisi',
+            'min_length' => 'Input min 3 karakter'
         ]);
 
         if ($this->form_validation->run() == false) {
